@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Todo</title>
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Preload för optimering -->
+    <link rel="preload" href="./css/styles.css" as="style">
+    <link rel="preload" href="./js/main.js" as="script">
+
+    <!-- Faktiska laddningen av filerna -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>PWA Todolist</h1>
+    </div>
+
+    <div id="installPrompt" class="install-prompt">
+        Installera appen på din enhet!
+    </div>
+
+    <div class="add-todo">
+        <input type="text" id="todoInput" placeholder="Lägg till ny uppgift...">
+        <button onclick="addTodo()">Lägg till</button>
+    </div>
+
+    <div id="todoList" class="todo-list">
+        <!-- Todo-items kommer att läggas till här -->
+    </div>
+
+    <div class="status-bar">
+        <p id="status">Uppkopplad</p>
+    </div>
+</body>
+
+</html>
